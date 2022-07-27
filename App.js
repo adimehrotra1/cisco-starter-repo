@@ -12,9 +12,14 @@ class App extends Component {
             <><div className="App">
                 <Banner />
                 <Exhibit name="IPV4 Display"
-                    children = 'Your IP is' >() 
+                    children = 'Your IP is' >
+                    <IPtool  url='https://api.ipify.org?format=json'/>
+                        
                 </Exhibit>
-                <Exhibit name="IPV6 Display"></Exhibit><Exhibit name="Don't forget about me, I'm an exhibit too!"></Exhibit>
+                <Exhibit name="IPV6 Display">
+                    <IPtool url='https://api64.ipify.org?format=json' />
+
+                </Exhibit><Exhibit name="Don't forget about me, I'm an exhibit too!"></Exhibit>
                 
             </div></>
         );

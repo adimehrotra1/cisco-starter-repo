@@ -1,30 +1,29 @@
 import React, { Component } from 'react';
-import {useState,useEffect} from 'react'
 
+class IPtool extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            url: props.url,
+            ipAddress: null
+        };
+    }
 
-function IPtool() {
-  //creating IP state
-  const [ip, setIP] = useState('');
+    componentDidMount() {
+        fetch(this.state.url)
+            .then(response => response.json())
+            .then(data => this.setState({ ipAddress: data.ip }));
+    }
 
-  //creating function to load ip address from the API
-  const getData = async () => {
-    const res = await fetch('https://api.ipify.org?format=json')
-    console.log(res.data);
-    setIP(res.data.IPv4)
-  }
-  
-  useEffect( () => {
-    //passing getData method to the lifecycle method
-    getData()
-
-  }, [])
-
-  return (
-    <div className="IPbox">
-      <h2>Your IP Address is</h2>
-      <h4>{ip}</h4>
-    </div>
-  );
+    render() {
+        return (
+            <span className="AddressDisplay">
+                {this.state.ipAddress}
+            </span>
+        );
+    }
 }
+
+
 
 export default IPtool;
