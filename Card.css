@@ -1,28 +1,28 @@
-.Card-Container {
+.Card {
     float: left;
     margin: 0.5vw;
     padding: 0vw 2vw 0vw 2vw;
     text-align: center;
-    color: #002933;
+    color: #285c69;
     background-color: yellowgreen;
-    border: 0.25vw solid #005266;
+    border: 0.25vw solid #00080a;
     border-radius: 2vw;
 }
 
-.Card-Title {
+.CardTitle {
     font-weight: bold;
     font-size: 1.75vw;
 }
 
-.Card-Content {
+.CardContent {
     margin: 0.5vw;
     padding: 1vw 1vw 1vw 1vw;
     text-align: center;
     font-weight: bold;
     font-size: 1.75vw;
-    color: #002933;
-    background-color: #80e5ff;
-    border: 0.25vw solid #005266;
+    color: #2a7688;
+    background-color: #5ab549;
+    border: 0.25vw solid #4aaec8;
     border-radius: 2vw;
 }
 

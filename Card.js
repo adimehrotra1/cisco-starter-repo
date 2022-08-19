@@ -1,19 +1,17 @@
-import React from 'react'
+import React, {Component} from 'react'
+import './Card.css';
 
-
-function Card(title, imageurl, body) {
+class Card extends Component{
+  render() {
   return (
-    <div className='Card-Container'>
-    
-      <div className='Card-Content'>
-        <div className='Card-Title'>
-          <h3>{title} </h3>
+    <div className="Card">
+        <h2 className="CardTitle">{this.props.name}</h2>
+        <div className="CardContent">
+            {this.props.children}
         </div>
-        <div className='Card-Body'>
-          <p>{body}</p>
-        </div>
-      </div>  
     </div>
-  )
+);
+}
 }
 
+export default Card
